@@ -47,7 +47,11 @@ spec:
             - containerPort: 7070
           env:
             - name: REDIS_ADDR
+{{- if .Values.redis.external.enabled }}
+              value: "{{ .Values.redis.external.address }}:{{ .Values.redis.external.port }}"
+{{- else }}
               value: redis-cart:6379
+{{- end }}
           livenessProbe:
             grpc:
               port: 7070
