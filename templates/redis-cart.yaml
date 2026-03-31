@@ -1,3 +1,4 @@
+{{- if not .Values.redis.external.enabled }}
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -84,3 +85,4 @@ spec:
         - name: redis-data
           persistentVolumeClaim:
             claimName: redis-cart-data
+{{- end }}

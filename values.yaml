@@ -6,6 +6,10 @@ global:
 redis:
   image: redis:alpine
   storage: 1Gi
+  external:
+    enabled: false
+    address: ""
+    port: 6379
 
 loadgenerator:
   enabled: true
