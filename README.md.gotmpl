@@ -7,6 +7,10 @@
 
 This chart is used by the Validated Patterns installation script that can be found [here](https://github.com/validatedpatterns/common/blob/main/scripts/pattern-util.sh)
 
+### Notable changes
+
+* v0.0.4: Add the option to use a redis instance external to the chart.
+
 {{ template "chart.homepageLine" . }}
 
 {{ template "chart.maintainersSection" . }}
@@ -18,12 +22,3 @@ This chart is used by the Validated Patterns installation script that can be fou
 {{ template "chart.valuesSection" . }}
 
 {{ template "helm-docs.versionFooter" . }}
-
-## Update CRD
-
-In order to update the CRD, copy the following file from the last released
-patterns operator version:
-
-```sh
-cp -v patterns-operator/config/crd/bases/gitops.hybrid-cloud-patterns.io_patterns.yaml ./crds/
-```
