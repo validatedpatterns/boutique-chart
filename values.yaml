@@ -3,6 +3,9 @@ global:
   imageTag: v0.10.4
   storageClass: ""
 
+frontend:
+  enableSingleSharedSession: false
+
 redis:
   image: redis:alpine
   storage: 1Gi

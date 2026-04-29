@@ -1,6 +1,6 @@
 # boutique
 
-![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square)
+![Version: 0.0.4](https://img.shields.io/badge/Version-0.0.4-informational?style=flat-square)
 
 Helm Chart to deploy Google's Boutique App
 
@@ -9,6 +9,7 @@ This chart is used by the Validated Patterns installation script that can be fou
 ### Notable changes
 
 * v0.0.4: Add the option to use a redis instance external to the chart.
+* v0.0.5: Add ENABLE_SINGLE_SHARED_SESSION setting to frontend to fake out load balancers.
 
 **Homepage:** <https://github.com/validatedpatterns/boutique-chart>
 
@@ -22,6 +23,7 @@ This chart is used by the Validated Patterns installation script that can be fou
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| frontend.enableSingleSharedSession | bool | `false` |  |
 | global.imageRegistry | string | `"us-central1-docker.pkg.dev/google-samples/microservices-demo"` |  |
 | global.imageTag | string | `"v0.10.4"` |  |
 | global.storageClass | string | `""` |  |

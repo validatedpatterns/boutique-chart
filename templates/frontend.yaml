@@ -66,6 +66,8 @@ spec:
               value: shoppingassistantservice:80
             - name: ENABLE_PROFILER
               value: "0"
+            - name: ENABLE_SINGLE_SHARED_SESSION
+              value: {{ .Values.frontend.enableSingleSharedSession }}
           livenessProbe:
             httpGet:
               path: /_healthz
