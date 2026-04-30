@@ -3,7 +3,7 @@ description: Helm Chart to deploy Google's Boutique App
 keywords:
 - pattern
 name: boutique
-version: 0.0.5
+version: 0.0.6
 home: https://github.com/validatedpatterns/boutique-chart
 maintainers:
   - name: Validated Patterns Team
