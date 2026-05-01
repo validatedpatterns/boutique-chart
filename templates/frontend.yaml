@@ -67,7 +67,7 @@ spec:
             - name: ENABLE_PROFILER
               value: "0"
             - name: ENABLE_SINGLE_SHARED_SESSION
-              value: {{ .Values.frontend.enableSingleSharedSession }}
+              value: {{ .Values.frontend.enableSingleSharedSession | quote }}
           livenessProbe:
             httpGet:
               path: /_healthz
